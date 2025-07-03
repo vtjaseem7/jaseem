@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email</title>
+      <link rel="icon" type="image/x-icon" href="letter-j.png">
+     <link rel="stylesheet" href="bootstrap.css">
+    <script src="email.js"></script>
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "ot8pwuIMUYurzH2yj",
+      });
+   })();
+</script>
+  </head>
+  <body class="bg-black text-white">
+    <div class="container justify-content-center align-items-center mt-3 bg-black">
+      <div class="row">
+        <div class="col-md-6 border-left py-3">
+          <h1 class="text-danger">Contact Me</h1>
+          <br>
+          <div class="form-group text-warning">
+            <h5 for="name ">Name:</h5>
+            <br>
+            <input type="text" class="form-control"  id="name" placeholder="Enter name"/>
+          </div>
+          <br>
+          <div class="form-group  text-warning">
+            <h5 for="email">Email:</h5>
+            <br>
+            <input type="email" class="form-control" id="email" placeholder="Enter email"/>
+          </div>
+          <br>
+          <div class="form-group  text-warning">
+            <h5 for="message">Message:</h5>
+            <br>
+            <textarea class="form-control" id="message" rows="3"></textarea>
+          </div>
+          <br>
+          <button class="btn btn-danger" onclick="sendMail()">Submit</button>
+        </div>
+      </div>
+    </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="bootstrap.js"></script>
+  </body>
+</html>
